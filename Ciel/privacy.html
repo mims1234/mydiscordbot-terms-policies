@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Ciel Bot</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #121212;
+            --text-color: #e5e5e5;
+            --muted-text: #a1a1aa;
+            --accent-color: #a3b8cc;
+            --accent-hover: #ffffff;
+            --card-bg: #18181b;
+            --border-color: #27272a;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            font-size: 14.5px;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 2rem;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background: var(--card-bg);
+            padding: 3rem 4rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+        h1, h2, h3 {
+            color: var(--text-color);
+            font-weight: 500;
+        }
+        h1 {
+            font-size: 1.8rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.75rem;
+            margin-bottom: 1.5rem;
+        }
+        h2 {
+            margin-top: 2.5rem;
+            font-size: 1.25rem;
+            color: #f4f4f5;
+        }
+        p, ul {
+            color: var(--muted-text);
+        }
+        li {
+            margin-bottom: 0.4rem;
+        }
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+        a:hover {
+            color: var(--accent-hover);
+        }
+        .last-updated {
+            font-size: 0.85rem;
+            color: var(--muted-text);
+            margin-top: -1.25rem;
+            margin-bottom: 2rem;
+            display: block;
+        }
+        nav {
+            margin-bottom: 2.5rem;
+            display: flex;
+            gap: 1rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 1rem;
+        }
+        nav a {
+            font-size: 0.9rem;
+            color: var(--muted-text);
+            font-weight: 500;
+        }
+        nav a:hover {
+            color: var(--text-color);
+        }
+        .highlight-box {
+            background: rgba(163, 184, 204, 0.05);
+            border-left: 3px solid var(--accent-color);
+            padding: 1.25rem;
+            border-radius: 0 6px 6px 0;
+            margin: 1.5rem 0;
+        }
+        .highlight-box ul {
+            margin: 0;
+            padding-left: 1rem;
+        }
+        .highlight-box li {
+            color: var(--text-color);
+        }
+        @media (max-width: 600px) {
+            body { padding: 1rem; }
+            .container { padding: 1.5rem; }
+            h1 { font-size: 1.5rem; }
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        .gallery img {
+            width: 100%;
+            border-radius: 6px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            border: 1px solid var(--border-color);
+            transition: transform 0.2s ease;
+            cursor: pointer;
+        }
+        .gallery img:hover {
+            transform: scale(1.02);
+        }
+        .gallery-caption {
+            text-align: center;
+            font-size: 0.8rem;
+            color: var(--muted-text);
+            margin-top: 0.5rem;
+        }
+        .gallery-item {
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="terms.html">Terms of Service</a>
+            <a href="privacy.html">Privacy Policy</a>
+        </nav>
+
+        <h1>Privacy Policy</h1>
+        <span class="last-updated">Last Updated: June 12, 2026</span>
+
+        <p>This Privacy Policy explains what data the Ciel Discord Bot ("we", "our", "the Bot") collects, how it is used, and how you can manage your data.</p>
+
+        <h2>1. Data We Collect</h2>
+        <p>To function properly, Ciel collects the following minimum required data:</p>
+        <ul>
+            <li><strong>Discord IDs:</strong> User IDs, Server IDs (Guild IDs), and Channel IDs.</li>
+            <li><strong>Server Configurations:</strong> Settings specifically configured for your server (e.g., active channels, notification preferences).</li>
+            <li><strong>Parsed Statistics:</strong> Card claims, summon counts, and related timer data as outlined in our explicit internal data schema below.</li>
+        </ul>
+
+        <div style="margin-top: 1.5rem; text-align: center;">
+            <img src="assets/Scheme of User data with respect to server.jpg" alt="Internal Data Schema" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); border: 1px solid rgba(255, 255, 255, 0.1);">
+            <div style="font-size: 0.85rem; color: var(--muted-text); margin-top: 0.5rem;">Ciel Bot Internal Data Schema</div>
+        </div>
+        <h2>2. Message Content Intent (Important)</h2>
+        <p>Ciel requires the privileged <strong>Message Content Intent</strong> to read specific messages—primarily interactions and drop data from the <strong>Mazoku bot (Discord ID: 1242388858897956906)</strong>—to compile player statistics, track card claims, and provide automated utility. We want to be completely transparent about how message content is handled:</p>
+        <div class="highlight-box">
+            <ul>
+                <li>Message content (specifically Mazoku bot outputs like card summons) is read <strong>in-memory only</strong> to parse necessary game data. <strong>Ciel does not read, parse, or log normal user messages.</strong> Furthermore, Ciel operates exclusively via Slash Commands and utilizes <strong>zero legacy prefix commands</strong>, guaranteeing that regular user chat is completely ignored.</li>
+                <li>Message content is <strong>never stored</strong> in any database, logs, or persistent storage.</li>
+                <li>Once a message is processed in-memory, the text content is immediately discarded.</li>
+            </ul>
+        </div>
+
+        <h2>3. How We Use Your Data</h2>
+        <p>The data we collect is used strictly for the functionality of the Bot. We use this data to:</p>
+        <ul>
+            <li>Execute commands requested by users.</li>
+            <li>Maintain server-specific configurations and preferences.</li>
+            <li>Track relevant bot-related statistics as advertised.</li>
+        </ul>
+
+        <h2>4. Data Sharing & Third Parties</h2>
+        <p>We value your privacy. <strong>No user data is ever sold, rented, or shared with third parties.</strong> All statistics and parsed data are kept entirely within the Ciel Discord Bot ecosystem. We do not use any external analytics services, and no data is exported to third-party dashboards.</p>
+
+        <h2>5. Data Storage, Retention, and Security</h2>
+        <p>Ciel's core infrastructure is designed with security and privacy in mind:</p>
+        <ul>
+            <li><strong>Hosting & Storage:</strong> Our database is hosted via MongoDB in Europe (adhering to strict European data protection standards), and the bot is securely hosted on a VPS in Qatar.</li>
+            <li><strong>Logging:</strong> We practice strict data minimization. System and error logs are rotated and cleared every 24 hours to ensure no stale data or accidental PII is retained.</li>
+            <li><strong>Retention:</strong> Server configuration data is retained as long as the Bot remains in your server. If the Bot is kicked, associated server data may be purged.</li>
+        </ul>
+
+        <h2>6. User Data Deletion</h2>
+        <p>You have the absolute right to request the deletion of any personal data we hold about you. To request data deletion, you must contact us directly via <strong>Discord DM</strong> or by emailing us using the information below. We will honor all deletion requests promptly.</p>
+
+        <h2>7. Children's Privacy</h2>
+        <p>In compliance with Discord's Terms of Service and applicable privacy laws (like COPPA/GDPR), Ciel does not knowingly collect or solicit any information from anyone under the age of 13 (or the minimum age of digital consent in your country). If we learn we have collected such information, we will delete it immediately.</p>
+
+        <h2>8. Contact Us</h2>
+        <p>If you have any questions about this Privacy Policy or wish to submit a data deletion request, please contact us at: <strong>imranmohsin184@gmail.com</strong> or reach out on our support server.</p>
+
+        <h2>9. Proof of Data Usage (For Discord Review)</h2>
+        <p>Below are examples demonstrating exactly how Ciel utilizes the Message Content intent. The workflow is strictly automated and functions as follows:</p>
+        <ol>
+            <li style="margin-bottom: 2rem;">
+                <strong>Data Parsing:</strong> Ciel reads the specific message output from the <strong>Mazoku bot</strong>. The message content is read in-memory to extract necessary timers and item data, and then the raw text is immediately discarded.
+                <div style="margin-top: 1rem; max-width: 500px;">
+                    <img src="assets/Mazoku Auto Summon .png" alt="Mazoku Bot Summon Data" style="width: 100%; border-radius: 6px; border: 1px solid var(--border-color); box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);">
+                    <div style="font-size: 0.8rem; color: var(--muted-text); margin-top: 0.5rem;">Parsed Mazoku Bot Data (Summon Preview)</div>
+                </div>
+            </li>
+            <li style="margin-bottom: 2rem;">
+                <strong>Automated Actions & Reminders:</strong> Based on the parsed data and timers, Ciel automatically triggers events—such as pinging users with a reminder when their next summon command is ready.
+                <div style="margin-top: 1rem; max-width: 500px;">
+                    <img src="assets/Mazoku Summon Reminder ping for users.png" alt="Summon Reminder Ping" style="width: 100%; border-radius: 6px; border: 1px solid var(--border-color); box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);">
+                    <div style="font-size: 0.8rem; color: var(--muted-text); margin-top: 0.5rem;">Automated Summon Reminder Triggered by Data</div>
+                </div>
+            </li>
+            <li style="margin-bottom: 1.5rem;">
+                <strong>Statistics Display:</strong> The aggregated data is used strictly to provide users with leaderboards, average claim times, and personal statistics via our own slash commands (examples below).
+            </li>
+        </ol>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="assets/Avg Claims Time.png" alt="Average Claims Time">
+                <div class="gallery-caption">Average Claims Time</div>
+            </div>
+            <div class="gallery-item">
+                <img src="assets/Help.png" alt="Command List">
+                <div class="gallery-caption">Command List</div>
+            </div>
+            <div class="gallery-item">
+                <img src="assets/Leaderboard Auto-Summon.png" alt="Leaderboard">
+                <div class="gallery-caption">Total Claims Leaderboard</div>
+            </div>
+            <div class="gallery-item">
+                <img src="assets/Server Overview.png" alt="Server Overview">
+                <div class="gallery-caption">Server Overview</div>
+            </div>
+            <div class="gallery-item">
+                <img src="assets/Recent Auto-Claimed Cards.png" alt="Recent Claims">
+                <div class="gallery-caption">Recent Claimed Cards</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
