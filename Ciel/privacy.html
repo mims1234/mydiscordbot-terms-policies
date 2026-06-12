@@ -151,8 +151,9 @@
         <h2>1. Data We Collect</h2>
         <p>To function properly, Ciel collects the following minimum required data:</p>
         <ul>
-            <li><strong>Discord IDs:</strong> User IDs, Server IDs (Guild IDs), and Channel IDs.</li>
+            <li><strong>Discord IDs & Profiles:</strong> User IDs, Server IDs (Guild IDs), Channel IDs, Display Names, and Avatars (strictly for leaderboard rendering).</li>
             <li><strong>Server Configurations:</strong> Settings specifically configured for your server (e.g., active channels, notification preferences).</li>
+            <li><strong>Server Roles:</strong> Role data to verify eligibility for automated prizes and access-gated commands.</li>
             <li><strong>Parsed Statistics:</strong> Card claims, summon counts, and related timer data as outlined in our explicit internal data schema below.</li>
         </ul>
 
@@ -170,7 +171,16 @@
             </ul>
         </div>
 
-        <h2>3. How We Use Your Data</h2>
+        <h2>3. Server Members Intent (Important)</h2>
+        <p>Ciel requires the privileged <strong>Server Members Intent (GUILD_MEMBERS)</strong> to reliably access the full member list of a server. This is necessary for:</p>
+        <ul>
+            <li><strong>Role Verification & Prizes:</strong> Checking if a winner of a Mazoku drop holds specific roles (e.g., Server Booster, Clan Member) for eligibility. Without this intent, checks for offline/inactive members silently fail.</li>
+            <li><strong>Username Resolution:</strong> Allowing players to reference other users by username in commands (e.g., gifting tokens). This requires scanning the full guild member list.</li>
+            <li><strong>Leaderboard Display:</strong> Resolving user IDs to display names and avatars for server-wide leaderboards without hitting API rate limits.</li>
+        </ul>
+        <p><em>Member information is accessed strictly in-memory at the time of each operation and is <strong>never persisted, logged, or transmitted</strong> to our database.</em></p>
+
+        <h2>4. How We Use Your Data</h2>
         <p>The data we collect is used strictly for the functionality of the Bot. We use this data to:</p>
         <ul>
             <li>Execute commands requested by users.</li>
@@ -178,10 +188,10 @@
             <li>Track relevant bot-related statistics as advertised.</li>
         </ul>
 
-        <h2>4. Data Sharing & Third Parties</h2>
+        <h2>5. Data Sharing & Third Parties</h2>
         <p>We value your privacy. <strong>No user data is ever sold, rented, or shared with third parties.</strong> All statistics and parsed data are kept entirely within the Ciel Discord Bot ecosystem. We do not use any external analytics services, and no data is exported to third-party dashboards.</p>
 
-        <h2>5. Data Storage, Retention, and Security</h2>
+        <h2>6. Data Storage, Retention, and Security</h2>
         <p>Ciel's core infrastructure is designed with security and privacy in mind:</p>
         <ul>
             <li><strong>Hosting & Storage:</strong> Our database is hosted via MongoDB in Europe (adhering to strict European data protection standards), and the bot is securely hosted on a VPS in Qatar.</li>
@@ -189,16 +199,16 @@
             <li><strong>Retention:</strong> Server configuration data is retained as long as the Bot remains in your server. If the Bot is kicked, associated server data may be purged.</li>
         </ul>
 
-        <h2>6. User Data Deletion</h2>
+        <h2>7. User Data Deletion</h2>
         <p>You have the absolute right to request the deletion of any personal data we hold about you. To request data deletion, you must contact us directly via <strong>Discord DM</strong> or by emailing us using the information below. We will honor all deletion requests promptly.</p>
 
-        <h2>7. Children's Privacy</h2>
+        <h2>8. Children's Privacy</h2>
         <p>In compliance with Discord's Terms of Service and applicable privacy laws (like COPPA/GDPR), Ciel does not knowingly collect or solicit any information from anyone under the age of 13 (or the minimum age of digital consent in your country). If we learn we have collected such information, we will delete it immediately.</p>
 
-        <h2>8. Contact Us</h2>
+        <h2>9. Contact Us</h2>
         <p>If you have any questions about this Privacy Policy or wish to submit a data deletion request, please contact us at: <strong>imranmohsin184@gmail.com</strong> or reach out on our support server.</p>
 
-        <h2>9. Proof of Data Usage (For Discord Review)</h2>
+        <h2>10. Proof of Data Usage (For Discord Review)</h2>
         <p>Below are examples demonstrating exactly how Ciel utilizes the Message Content intent. The workflow is strictly automated and functions as follows:</p>
         <ol>
             <li style="margin-bottom: 2rem;">
